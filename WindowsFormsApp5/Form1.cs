@@ -9,6 +9,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp5.Properties;
 
 namespace WindowsFormsApp5
 {
@@ -51,13 +52,29 @@ namespace WindowsFormsApp5
         private void button4_Click(object sender, EventArgs e)
         {
 
+            //wav
+            //SoundPlayer simpleSound = new SoundPlayer("https://www.majalisna.com/multimedia/408/208575-1275207271.wav");
+            //simpleSound.Play();
 
-            SoundPlayer simpleSound = new SoundPlayer("https://www.majalisna.com/multimedia/408/208575-1275207271.wav");
-            simpleSound.Play();
+          //  wav
+
+            //or you can use embedded resource
+            //SoundPlayer sndplayr = new
+            //     SoundPlayer(Resources._1);
+            //sndplayr.Play();
+
+            //mp3
             //WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
 
             //wplayer.URL = "114.mp3";
-            //wplayer.Controls.Play();
+            //wplayer.controls.play();
+
+            //or you can use online url
+            // mp3
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+            wplayer.URL = "https://server8.mp3quran.net/ahmad_huth/001.mp3";
+            wplayer.controls.play();
         }
     }
 }
